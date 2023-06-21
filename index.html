@@ -8,12 +8,104 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1 class="">Conoce nuestros países</h1>
-    <h2 class="">Perú y México</h2>
+    <!-- seleccionar nombre -->
+ 
+  
+    <div class="container">
+        <div class="section-welcome">
+            <img src="./assets/preguntas-mas-frecuentes.png" alt="">
+            <h1>Bienvenido/a a la Trivia de Gastronomía</h1>
+            <h3 class="">Conoce nuestros países</h3>
+            <h4 class="">Perú y México</h4>
+
+
+            <label for="name">Ingresa tu nombre:</label>
+            <input type="text" id="name" placeholder="Ingresa tu nombre">
+          </div>
+        <div class="btn">
+            <button onclick="startTrivia()">Comencemos</button>
+            <a class="btn" href="#mi-elemento" onclick="startName()">Inicia aquí</a>
+        </div>
+<!--         <a href="#mi-elemento">Ir al elemento</a>
+ -->
+      <div class="section-question_peru" >
+        <a  id="mi-elemento">.</a>
+        <div class="wrapper">
+            <div class="content" role="main">
+              <div class="instructions">
+                <form action="">
+                  <label>¿Cuál es el plato típico peruano a base de pescado crudo marinado en limón y especias?
+      </label>
+                 <p>
+                   Leche de tigre
+                  </p>
+                  <input type="radio"> <p>
+                   chicharron de mariscos
+                  </p>
+                  <input type="radio"> <p>
+                  Ceviche
+                  </p>
+                  <input type="radio">
+                  <br>
+                </form>
+                <button class="button btn--remix">
+                  Enviar respuesta
+                </button>
+                  <button class="button btn--remix">
+                  Ver resultado
+                </button>
+                  <a href="#mi-elemento2" class="button btn--remix">
+                  Continuar
+                </a>
+                <p>
+                  <strong>¡Acertaste!</strong> es momento de continuar con la siguiente pregunta <span class="fileopener" data-file="TODO.md" data-line="0"
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr>
+              <div class="wrapper">
+            <div class="content" role="main">
+            
+        
+              <div class="section-question_mexico" >
+                <form action="" id="mi-elemento2">
+                  <label>1. ¿Cuál es el plato mexicano que consiste en una tortilla de maíz rellena de carne, frijoles, queso y otros ingredientes, luego enrollada y frita?
+      </label>
+                 <p>
+                   Tostadas
+                  </p>
+                  <input type="radio"> <p>
+                   Tacos
+                  </p>
+                  <input type="radio"> <p>
+                  Quesadillas
+                  </p>
+                  <input type="radio">
+                </form>
+                <p>
+                   <strong>¡Lo lograste!</strong> pasaste  <span class="fileopener" data-file="TODO.md" data-line="0"
+                    >la trivia del día</span> 
+                </p>
+              </div>
+            </div>
+          </div>
+          <footer class="footer">
+            <div class="links"></div>
+            <p>Hecho por Jan y Meli Barrios</p>
+          </footer>
+      </div>
+      <div class="section-question_mexico">
+        <img class="" src="" alt="">
+      </div>
+    </div>
+    <h2 id="mi-elemento">Este es mi elemento</h2>
 
 
 
 
-    <script src="./index.html"></script>
+
+
+    <script src="./main.js"></script>
 </body>
 </html>
