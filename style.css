@@ -1,4 +1,10 @@
-
+:root{
+  --main-color:#88216b;
+  --acento:#993b7e;
+  --fondo:#333;
+  --aciertos:green;
+  --fallas:red;
+}
 
 *{
     margin: 0;
@@ -10,7 +16,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: rgb(251,213,202);
+    background:var(--acento);
     background: linear-gradient(90deg, rgba(251,213,202,1) 35%, rgba(241,169,162,1) 92%);
     color: #333;
 
@@ -24,20 +30,19 @@ body{
     padding: 40px 35px;
     text-align: center;
     margin-top: 100px;
-    
   }
-  .section_card{ 
+  .seccion_card{ 
   background-color: white;
   border-radius: 20px;
   padding: 30px;
   box-shadow: 10px 5px 5px #ebb3b3;
 }
 
-  .section-welcome img{
-    width: 10%;
-    margin-bottom: 1.5rem;
-    border: 5px solid pink;
-    
+  .section_card_img {
+    margin-top: 30px;
+    max-width: 40%;
+    min-width: 10%;
+    height: auto;
   }
   h1 {
     font-size: 24px;
@@ -55,21 +60,103 @@ body{
   
   button, a{
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: var(--main-color);
     color: #fff;
     border: none;
-    border-radius: 40px;
     cursor: pointer;
     text-decoration: none;
+    transition: .5s;
+ 
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: var(--acento);
+    transform: scale(1.1);
+
   }
-  .section-question_peru{
+  #pantalla_juego{
+    display: none;
+}
+.pantalla-juego{
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+.pantalla-juego img{
+    max-width: 400px;
+    width: 100%;
+}
+.opciones{
+  max-width: 400px;
+  margin: auto;
+}
+.opcion{
+  display: flex;
+  position: relative;
+  align-items: center;
+  max-width: 400px;
+  margin: 30px auto;
+  cursor: pointer;
+}
+.opcion .letra{
+  background-color: var(--main-color);
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 35px;
+  border: 5px solid #fff;
+  position: relative;
+}
+.opcion .nombre{
+  background: #fff;
+  width: 100%;
+  font-size: 25px;
+  position: absolute;
+  margin-left: 30px;
+  z-index: -2;
+  border-radius: 0 20px 20px 0;
+  padding: 7px 0 7px 30px;
+}
+/* clases que se aplicará cuando haya acertada la opcion  */
+.opcion .nombreAcertada{
+  background-color: var(--aciertos);
+  color: #fff;
+}
+.opcion .letraAcertada{
+  background-color: var(--aciertos);
+  color: #fff ;
+}
+/* clases que se aplicaran cuando se equivoque en la opcion elegida */
+.opcion .nombreNoAcertada{
+  background-color: var(--fallas);
+  color: #fff;
+}
+.opcion .letraNoAcertada{
+  background-color: var(--fallas);
+  color: #fff;
+}
+
+
+
+/*   .section-question_peru{
     margin-top: 110%;
     border: 1px solid white;
-  }
-  .section-question_mexico{
+  } */
+/*   .section-question_mexico{
     margin-top: 110%;
+  } */
+  footer{
+    width: 100%;
+    background-color: var(--fondo);
+    color: white;
+    border: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
   }
