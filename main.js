@@ -48,6 +48,8 @@ function cargarImagen(){
       document.getElementById("n2").innerHTML = opciones[posicionActual][2];
   }
 }
+
+
 function limpiarOpciones(){
   document.getElementById("n0").className = "nombre";
   document.getElementById("n1").className = "nombre";
