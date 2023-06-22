@@ -16,7 +16,7 @@ function startName() {
     
     if (name !== "") {
       alert("¡Bienvenido/a, " + name + "!");
-      // Aquí puedes continuar con la lógica de tu trivia
+   
     } else {
       alert("Por favor, ingresa tu nombre antes de comenzar la trivia.");
     }
@@ -35,13 +35,12 @@ function startName() {
 }
 
 function cargarImagen(){
-  //controlo si se acabaron las imagenes
   if(paises.length <= posActual){
       terminarJuego();
   }
   else{
       limpiarOpciones();
-
+console.log(posActual);
       document.getElementById("imgPais").src = "assets/" + paises[posActual];
       document.getElementById("n0").innerHTML = opciones[posActual][0];
       document.getElementById("n1").innerHTML = opciones[posActual][1];
