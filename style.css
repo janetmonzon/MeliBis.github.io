@@ -56,7 +56,9 @@ body{
     padding: 5px;
     margin-bottom: 10px;
   }
-  
+  #btn{
+    display: none;
+  }
   button, a{
     padding: 10px 20px;
     background-color: var(--main-color);

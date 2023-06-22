@@ -29,6 +29,7 @@ function startName() {
 
     document.getElementById("pantalla_inicial").style.display = "none";
     document.getElementById("pantalla_juego").style.display = "block";
+
     cargarImagen();
 
 }
@@ -77,6 +78,7 @@ function comprobarRespuesta(opElegida){
 function terminarJuego(){
   document.getElementById("pantalla_juego").style.display = "none";
   document.getElementById("pantalla_final").style.display = "block";
+  document.getElementById("btn").style.display = "block";
 
   document.getElementById("numCorrectas").innerHTML = cantidadAcertadas;
   document.getElementById("numIncorrectas").innerHTML = paises.length - cantidadAcertadas;
