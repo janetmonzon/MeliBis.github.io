@@ -16,14 +16,13 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background:var(--acento);
     background: linear-gradient(90deg, rgba(251,213,202,1) 35%, rgba(241,169,162,1) 92%);
     color: #333;
 
 }
 
 .container{
-    width: 90%;
+    width: 60%;
     height: 60%;
     max-width: 900px;
     margin: 100px auto 0;
