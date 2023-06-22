@@ -1,13 +1,13 @@
 
 let paises= ['mex1.png', 'peru2.png']
 
-let resCorrecta= [1,2]
+let correcta= [1,2]
 let opciones= [];
 
 opciones.push(["Quesadillas", "Tacos", "Enchiladas"]);
 opciones.push(["Leche de tigre", "Chicharron de mariscos", "Ceviche"]);
 
-let posicionActual=0;
+let posActual=0;
 let cantidadAcertadas=0;
 
 function startName() {
@@ -22,8 +22,9 @@ function startName() {
     }
   }
 
+  //colocar boton comenzar a jugar con if, else eliminando botonn pedir nombre cuando nos de la bienvenida
   function comenzarJuego(){
-    posicionActual = 0;
+    posActual = 0;
     cantidadAcertadas = 0;
 
     document.getElementById("pantalla_inicial").style.display = "none";
@@ -34,16 +35,16 @@ function startName() {
 
 function cargarImagen(){
   //controlo si se acabaron las imagenes
-  if(paises.length <= posicionActual){
+  if(paises.length <= posActual){
       terminarJuego();
   }
   else{
       limpiarOpciones();
 
-      document.getElementById("imgPais").src = "assets/" + paises[posicionActual];
-      document.getElementById("n0").innerHTML = opciones[posicionActual][0];
-      document.getElementById("n1").innerHTML = opciones[posicionActual][1];
-      document.getElementById("n2").innerHTML = opciones[posicionActual][2];
+      document.getElementById("imgPais").src = "assets/" + paises[posActual];
+      document.getElementById("n0").innerHTML = opciones[posActual][0];
+      document.getElementById("n1").innerHTML = opciones[posActual][1];
+      document.getElementById("n2").innerHTML = opciones[posActual][2];
   }
 }
 
@@ -59,7 +60,7 @@ function limpiarOpciones(){
 }
 
 function comprobarRespuesta(opElegida){
-  if(opElegida==correcta[posicionActual]){
+  if(opElegida==correcta[posActual]){
       document.getElementById("n" + opElegida).className = "nombre nombreAcertada";
       document.getElementById("l" + opElegida).className = "letra letraAcertada";
       cantidadAcertadas++;
@@ -71,14 +72,14 @@ function comprobarRespuesta(opElegida){
       document.getElementById("l" + resCorrecta[posicionActual]).className = "letra letraAcertada";
   }
   posActual++;
-  setTimeout(cargarBandera,1000);
+  setTimeout(cargarImagen,1000);
 }
 function terminarJuego(){
   document.getElementById("pantalla_juego").style.display = "none";
   document.getElementById("pantalla_final").style.display = "block";
 
   document.getElementById("numCorrectas").innerHTML = cantidadAcertadas;
-  document.getElementById("numIncorrectas").innerHTML = banderas.length - cantidadAcertadas;
+  document.getElementById("numIncorrectas").innerHTML = paises.length - cantidadAcertadas;
 }
 
 function volverAlInicio(){
